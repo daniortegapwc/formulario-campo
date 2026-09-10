@@ -12,8 +12,8 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Formulario">
 <link rel="manifest" href="manifest.webmanifest">
-<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%23C8102E'/%3E%3Ctext x='90' y='118' font-family='Arial Narrow,Arial' font-weight='700' font-size='84' fill='white' text-anchor='middle'%3EF1%3C/text%3E%3C/svg%3E">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C8102E'/%3E%3Ctext x='32' y='43' font-family='Arial Narrow,Arial' font-weight='700' font-size='30' fill='white' text-anchor='middle'%3EF1%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%23C8102E'/%3E%3Crect x='53' y='42' width='74' height='96' rx='8' fill='white'/%3E%3Crect x='67' y='64' width='46' height='8' rx='4' fill='%23C8102E'/%3E%3Crect x='67' y='85' width='46' height='8' rx='4' fill='%23C8102E'/%3E%3Crect x='67' y='106' width='26' height='8' rx='4' fill='%23C8102E'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23C8102E'/%3E%3Crect x='19' y='15' width='26' height='34' rx='3' fill='white'/%3E%3Crect x='24' y='23' width='16' height='3' rx='1.5' fill='%23C8102E'/%3E%3Crect x='24' y='31' width='16' height='3' rx='1.5' fill='%23C8102E'/%3E%3Crect x='24' y='39' width='9' height='3' rx='1.5' fill='%23C8102E'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&display=swap">
 <style>
@@ -198,7 +198,7 @@ html.locked, html.locked body{overflow:hidden}
 (function(){
   document.documentElement.classList.add("locked");
   var guardado = null;
-  try { guardado = localStorage.getItem("f1surv.code"); } catch (e) {}
+  try { guardado = localStorage.getItem("campo.code"); } catch (e) {}
   if (guardado) {
     /* Ya se introdujo en este movil: se descifra solo, sin ensenar el campo. */
     document.getElementById("gate-form").hidden = true;
@@ -303,7 +303,7 @@ const OTHER = "__other__";
 
 /* ---------- utilidades ---------- */
 const $ = (sel, el=document) => el.querySelector(sel);
-const KEY = { resp:"f1surv.responses", draft:"f1surv.draft", who:"f1surv.surveyor", dev:"f1surv.device", code:"f1surv.code" };
+const KEY = { resp:"campo.responses", draft:"campo.draft", who:"campo.surveyor", dev:"campo.device", code:"campo.code" };
 function lsGet(k, def){ try { const v = localStorage.getItem(k); return v===null ? def : JSON.parse(v); } catch(e){ return def; } }
 function lsSet(k, v){ try { localStorage.setItem(k, JSON.stringify(v)); return true; } catch(e){ toast("No se ha podido guardar en el móvil (almacenamiento bloqueado)", "err"); return false; } }
 function splitTitle(t){ const m = t.match(/^ES:\s*(.*?)\s+-\s+EN:\s*(.*)$/s); return m ? { es:m[1].trim(), en:m[2].trim() } : { es:t, en:"" }; }

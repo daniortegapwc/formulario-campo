@@ -1,7 +1,7 @@
 {
-  "name": "Encuesta GP Madrid F1",
-  "short_name": "Encuesta F1",
-  "description": "Encuesta al público del GP de España de F1 en Madrid. Funciona sin cobertura.",
+  "name": "Formulario de campo",
+  "short_name": "Formulario",
+  "description": "Recogida de datos en movil. Requiere codigo de acceso.",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
@@ -11,7 +11,7 @@
   "theme_color": "#C8102E",
   "icons": [
     {
-      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23C8102E'/%3E%3Ctext x='256' y='330' font-family='Arial Narrow,Arial' font-weight='700' font-size='230' fill='white' text-anchor='middle'%3EF1%3C/text%3E%3C/svg%3E",
+      "src": "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='96' fill='%23C8102E'/%3E%3Crect x='150' y='120' width='212' height='272' rx='20' fill='white'/%3E%3Crect x='196' y='186' width='120' height='22' rx='11' fill='%23C8102E'/%3E%3Crect x='196' y='245' width='120' height='22' rx='11' fill='%23C8102E'/%3E%3Crect x='196' y='304' width='72' height='22' rx='11' fill='%23C8102E'/%3E%3C/svg%3E",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"

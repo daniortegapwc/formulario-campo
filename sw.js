@@ -1,5 +1,5 @@
 /* Service worker: deja la app disponible sin cobertura una vez abierta con conexión. */
-const VERSION = "f1surv-v4";
+const VERSION = "campo-v5";
 const FONTS = VERSION + "-fonts";
 const SHELL = ["./", "./index.html", "./manifest.webmanifest"];
 
