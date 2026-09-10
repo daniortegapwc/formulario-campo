@@ -1,0 +1,7 @@
+# Este repositorio publica SOLO la app web (GitHub Pages).
+# El cuaderno de Excel, los scripts y las respuestas se quedan en local.
+*
+!.gitignore
+!index.html
+!sw.js
+!manifest.webmanifest
